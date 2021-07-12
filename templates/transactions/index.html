@@ -1,39 +1,28 @@
 {% extends "base.html" %}
 
-{% block nav %} 
-<header>     
-    <nav>
-        <ul>
+{% block account %}
+    <div class="container">
+        <button>BACK</button>
+        <img src="/Users/arek/Desktop/spending_tracker/static/images/monzo.png" alt="monzo">
+        <div id="balance">
+            <p>Net Balance:</p>
+            <p>£ 1360.69</p>
+        </div>
+        <button id="transaction">Add Transaction</button>
+        <button id="alert">Set Balance Alert</button>
+        <div>
+            <p>Sort Transaction by Date</p>
+            <!-- two user inputs -->
 
-            <li>Add Transaction</li>
-            <li>Delete Transaction</li>
-            <span class="material-icons-outlined"></span>
-            <li><a href="">Home</a></li>
+        </div>
+        <div class="statements">
 
-            <li><a href="">Overview</a></li>
-
-            <li><a href=(/)> Log out</a></li>
-        </ul>
-    </nav>
-</header>
-
-
-
-{% endblock %}
-
-
-
-{% block content %}
-
-
+        </div>
+        
+    </div>
 
 
 
 
 {% endblock %}
 
-<!-- new block -->
-
-{% block footer %}
-
-{% endblock %}

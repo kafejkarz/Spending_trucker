@@ -12,11 +12,23 @@
     <title>Document</title>
 </head>
 <body>
-    {% block nav %} 
+    <header>     
+        <nav>
+            <ul>
+                <span class="material-icons-outlined"></span>
+                <li><a href="">Home</a></li>
 
-    {% endblock %}
+                <li><a href="">Overview</a></li>
+
+                <li><a href=(/)> Log out</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
+        {% block account %}
+
+        {% endblock %}
     
     
     {% block homepage %}
