@@ -6,3 +6,10 @@ import repositories.merchant_repository as merchant_repository
 import repositories.tag_repository as tag_repository
 
 transactions_blueprint = Blueprint("transactions", __name__)
+
+
+@transactions_blueprint.route("/transactions")
+def transactions():
+    transactions = transaction_repository.select_all()
+    return render_template("transactions/index.html", )
+    

@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS tag;
-DROP TABLE IF EXISTS merchant;
-DROP TABLE IF EXISTS transaction;
+DROP TABLE IF EXISTS tags;
+DROP TABLE IF EXISTS merchants;
+DROP TABLE IF EXISTS transactions;
 
 
-CREATE TABLE transaction (
+CREATE TABLE transactions (
     id SERIAL PRIMARY KEY,
     transaction_title VARCHANT(225),
     amount INT,
@@ -11,12 +11,12 @@ CREATE TABLE transaction (
     merchant_id INT REFERENCE merchant(id)
 );
 
-CREATE TABLE merchant(
+CREATE TABLE merchants (
     id SERIAL PRIMARY KEY,
     merchant_title VARCHANT(225),
 );
 
-CREATE TABLE tag (
+CREATE TABLE tags (
     id SERIAL PRIMARY KEY,
     tag_title VARCHANT(225)
 );
