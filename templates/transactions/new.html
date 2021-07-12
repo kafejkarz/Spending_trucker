@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block new_transaction %}
+    <div>
+        <button>BACK</button>
+
+    </div>
+    <div>
+        <p>Transaction Editor</p>
+    </div>
+    <div class="new_transaction">
+        <form action="/transactions" method="post">
+            <div>
+                <label for="amount">Type amount:</label>
+                <input type="text" id="amount" name="amount" placeholder="Amount" required autofocus>
+            </div>
+            <div>
+                <label for="merchant">Add merchant:</label>
+                <input type="text" id="merchant" name="merchant" placeholder="Merchant" required autofocus>
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="text" id="date" name="date" placeholder="Date" required autofocus>
+            </div>
+            <div>
+                <label for="tag">Add tag:</label>
+                <input type="text" id="tag" name="tag" placeholder="Tag" required autofocus>
+            </div>
+            
+            
+        </form>
+        
+    </div>
+    
+    
+
+{% endblock %}
