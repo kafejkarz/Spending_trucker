@@ -22,3 +22,15 @@ def new_transaction():
     transactions = transaction_repository.select_all()
     return render_template("transactions/new.html")
 
+
+@transactions_blueprint.route("/transactions", methods=['POST'])
+def create_transaction():
+    amount = request.form['amount']
+    merchant = request.form['merchant']
+    date = request.form['date']
+    tag = request.form['tag']
+    transaction = Transaction(transaction_title, amount, tag_id, merchand_id)
+    transaction_repository.save(transaction)
+    return redirect('/transactions')
+
+
