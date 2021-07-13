@@ -2,18 +2,16 @@
 
 {% block account %}
     <div class="container">
-        <button>BACK</button>
-        <img src="/Users/arek/Desktop/spending_tracker/static/images/monzo.png" alt="monzo">
+        <button id="back">BACK</button>
+        <img src="" alt="monzo" id="image">
         <div id="balance">
             <p>Net Balance:</p>
             <p>£ 1360.69</p>
         </div>
-        <button id="transaction">Add Transaction</button>
+        <button id="transaction"><a href="/transactions/new">Add transaction</a></button>
         <button id="alert">Set Balance Alert</button>
-        <div>
+        <div id="sort">
             <p>Sort Transaction by Date</p>
-            <!-- two user inputs -->
-
         </div>
         <div class="statements">
 

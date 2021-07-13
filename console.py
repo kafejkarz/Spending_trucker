@@ -14,3 +14,4 @@ tag_repository.delete_all()
 
 
 
+pdb.set_trace()

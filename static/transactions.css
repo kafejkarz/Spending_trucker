@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    height: 600px;
+    grid-template-areas: 
+    "back image"
+    "balance alert"
+    "transaction sort"
+    "statements statements"; 
+    
+}
+#back {
+    background-color: coral;
+    
+}
+#image{
+    background-color: cyan;
+    
+}
+#balance{
+    background-color: darkcyan;
+    
+}
+#alert{
+    background-color: deepskyblue;
+    
+}
+#transaction{
+    background-color: darkkhaki;
+
+}
+#sort{
+    background-color: crimson;
+    
+}
+.statements{
+    background-color: burlywood;
+    
+}

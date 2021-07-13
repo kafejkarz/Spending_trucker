@@ -14,13 +14,15 @@ transactions_blueprint = Blueprint("transactions", __name__)
 @transactions_blueprint.route("/transactions")
 def transactions():
     transactions = transaction_repository.select_all()
-    return render_template("transactions/index.html")
+    return render_template("transactions/index.html", transactions=transactions)
 
+# NEW
+# GET
 
 @transactions_blueprint.route("/transactions/new", methods=["GET"])
 def new_transaction():
     transactions = transaction_repository.select_all()
-    return render_template("transactions/new.html")
+    return render_template("transactions/new.html", transactions=transactions)
 
 
 @transactions_blueprint.route("/transactions", methods=['POST'])
@@ -29,8 +31,9 @@ def create_transaction():
     merchant = request.form['merchant']
     date = request.form['date']
     tag = request.form['tag']
-    transaction = Transaction(transaction_title, amount, tag_id, merchand_id)
-    transaction_repository.save(transaction)
+    # transaction =transaction_repository.select()
+    # new_transaction = Transaction(transaction_title, amount, tag_id, merchand_id)
+    # transaction_repository.save(new_transaction)
     return redirect('/transactions')
 
 

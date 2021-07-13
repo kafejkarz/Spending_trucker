@@ -1,0 +1,27 @@
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    
+}
+.transaction {
+    
+    justify-content: center;
+    width: 50%;
+
+}
+
+.new_transaction {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+
+}
+.transaction{
+    width: 100%;
+
+}

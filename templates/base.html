@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="base.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='transactions.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com"> 
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
@@ -15,8 +17,7 @@
     <header>     
         <nav>
             <ul>
-                <span class="material-icons-outlined"></span>
-                <li><a href="">Home</a></li>
+                <li><a href="/transactions">Home</a></li>
 
                 <li><a href="">Overview</a></li>
 

@@ -1,0 +1,51 @@
+/* body {
+    display: flex;
+
+}
+
+header{
+    display: flex;
+}
+nav{
+    display: flex; 
+/* } */
+nav>ul {
+    display: flex;
+    justify-content: space-around;
+    color: white; 
+    
+    
+    
+}
+.icon{
+    color: black;
+}
+nav{
+    background-color: blanchedalmond; 
+    size: 120px;
+    
+}
+ul{
+    margin: 0%;
+} 
+
+
+
+footer{
+    
+    
+    justify-content: space-around;
+    
+}
+footer > ul {
+    display: flex;
+    justify-content: space-around;
+    size: 200px;
+    background-color: black;
+    color: white;
+}
+main{
+    width: auto;
+    height: 600px;
+}
+
