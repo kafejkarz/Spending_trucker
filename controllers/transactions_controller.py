@@ -27,13 +27,17 @@ def new_transaction():
 
 @transactions_blueprint.route("/transactions", methods=['POST'])
 def create_transaction():
+    transaction_title =request.form["transaction_title"]
     amount = request.form['amount']
     merchant = request.form['merchant']
-    date = request.form['date']
     tag = request.form['tag']
-    # transaction =transaction_repository.select()
-    # new_transaction = Transaction(transaction_title, amount, tag_id, merchand_id)
-    # transaction_repository.save(new_transaction)
+    new_transaction = Transaction(transaction_title, amount, merchant , tag )
+    transaction_repository.save(new_transaction)
     return redirect('/transactions')
+
+@transactions_blueprint.route("/transactions/<id>/delete", methods=['POST'])
+def delete_transaction(id):
+    transaction_repository.delete(id)
+    return redirect("/transactions")
 
 

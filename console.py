@@ -11,6 +11,23 @@ transaction_repository.delete_all()
 merchant_repository.delete_all()
 tag_repository.delete_all()
 
+tag = Tag("home")
+tag_repository.save(tag)
+# tag1 = Tag("Groceries")
+# tag_repository.save(tag1)
+# tag2 = Tag("entertainment")
+# tag_repository.save(tag2)
+
+
+
+merchant = Merchant("tesco")
+merchant_repository.save(merchant)
+# merchant1 = Merchant("ebay")
+# merchant_repository.save(merchant1)
+# merchant2 = Merchant("amazon")
+# merchant_repository.save(merchant2)
+
+
 
 
 

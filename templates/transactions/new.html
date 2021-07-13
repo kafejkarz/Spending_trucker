@@ -13,20 +13,21 @@
         <div class="new_transaction">
             <form action="/transactions" method="post">
                 <div>
+                    <label for="transaction_title">transaction title:</label>
+                    <input type="text" id="transaction_title" name="transaction_title" placeholder="string" required autofocus>
+                </div>
+                <div>
                     <label for="amount">Type amount: £</label>
                     <input type="text" id="amount" name="amount" placeholder="124.56" required autofocus>
                 </div>
                 <div>
                     <label for="merchant">Add merchant:</label>
-                    <input type="text" id="merchant" name="merchant" placeholder="Ebay / Tesco" required autofocus>
+                    <input type="text" id="merchant" name="merchant" placeholder="merchant_id number" required autofocus>
                 </div>
-                <div>
-                    <label for="date">Date:</label>
-                    <input type="text" id="date" name="date" placeholder="30/06/1975" required autofocus>
-                </div>
+            
                 <div>
                     <label for="tag">Add tag:</label>
-                    <input type="text" id="tag" name="tag" placeholder="Groceries / Garage" required autofocus>
+                    <input type="text" id="tag" name="tag" placeholder="tag_id number" required autofocus>
                 </div>
                 <button type="submit">Add transaction</button>
                 

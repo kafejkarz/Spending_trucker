@@ -3,13 +3,17 @@ from db.run_sql import run_sql
 from models.transaction import Transaction
 from models.merchant import Merchant
 from models.tag import Tag
+import pdb 
 
-import repositories.transaction_repository as transaction_repository
+
+import repositories.tag_repository as tag_repository
+import repositories.merchant_repository as merchant_repository
 
 
 def save(transaction):
     sql = "INSERT INTO transactions (transaction_title, amount, tag_id, merchant_id) VALUES (%s, %s, %s, %s) RETURNING * "
     values = [transaction.transaction_title, transaction.amount, transaction.tag_id, transaction.merchant_id]
+    
     results = run_sql(sql, values)
     id = results[0]['id']
     transaction.id = id
@@ -20,9 +24,9 @@ def select_all():
     sql = "SELECT * FROM transactions"
     results = run_sql(sql)
     for row in results:
-        tag = tag_repository.select(row['tag_ig'])
+        tag = tag_repository.select(row['tag_id'])
         merchant = merchant_repository.select(row['merchant_id'])
-        transaction = Transaction(row['transaction_title'], row['amount'], row['tag_id'],tag, merchant, row['merchant_id'])
+        transaction = Transaction(row['transaction_title'], row['amount'], row['tag_id'], row['merchant_id'], row["id"])
         transactions.append(transaction)
     return transactions
 
