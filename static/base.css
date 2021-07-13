@@ -9,21 +9,36 @@ header{
 nav{
     display: flex; 
 /* } */
-nav>ul {
+nav>ul a{
     display: flex;
     justify-content: space-around;
     color: white; 
+    padding: 10px;
     
     
     
+}
+nav>ul{
+
+    display: flex;
+    justify-content: space-around;
 }
 .icon{
     color: black;
 }
 nav{
-    background-color: blanchedalmond; 
+    background-color: black; 
     size: 120px;
+    padding-top: 15px ;
+    padding-bottom: 15px;
     
+   
+    
+}
+
+.main_nav{
+
+    color: white;
 }
 ul{
     margin: 0%;
@@ -35,6 +50,7 @@ footer{
     
     
     justify-content: space-around;
+   
     
 }
 footer > ul {
@@ -43,6 +59,7 @@ footer > ul {
     size: 200px;
     background-color: black;
     color: white;
+    padding: 20px;
 }
 main{
     width: auto;

@@ -13,39 +13,40 @@
             <div id="sort">
                 <p>Sort Transaction by Date</p>
             </div>
-            <div class="statements">
-               
+        </div>   
+        <div class="statements">
+            
 
-                {% for transaction in transactions %}
-                
-                <div class="transaction_title">{{transaction.transaction_title}}</div>
-                <div class="amount">{{transaction.amount}}</div>
-                <div class="merchant">{{transaction.merchant_id}}</div>
-                <div class="tag">{{transaction.tag_id}}</div>
-                <div class="buttons">
+            {% for transaction in transactions %}
+            
+            <div class="transaction_title">{{transaction.transaction_title}}</div>
+            <div class="amount">{{transaction.amount}}</div>
+            <div class="merchant">{{transaction.merchant_id}}</div>
+            <div class="tag">{{transaction.tag_id}}</div>
+            <div class="buttons">
 
-                    <form action="/transactions/{{transaction.id}}/delete" method="POST">
-                    <button class="trash-button">
-                        <i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i>
-                    </button>
-                    </form>
+                <form action="/transactions/{{transaction_id}}delete" method="POST">
+                <button class="trash-button">
+                    <i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i>
+                </button>
+                </form>
 
-                    <!-- {% if transaction.completed == True %}
-                    <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
-                    {% else %}
-                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-                    {% endif %} -->
-
-                </div>
-                
-                
-                {% endfor %}
-                
-
+                <!-- {% if transaction.completed == True %}
+                <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+                {% else %}
+                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                {% endif %} -->
 
             </div>
             
+            
+            {% endfor %}
+            
+
+
         </div>
+            
+        
 
 
 
