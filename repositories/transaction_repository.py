@@ -11,8 +11,8 @@ import repositories.merchant_repository as merchant_repository
 
 
 def save(transaction):
-    sql = "INSERT INTO transactions (transaction_title, amount, tag_id, merchant_id) VALUES (%s, %s, %s, %s) RETURNING * "
-    values = [transaction.transaction_title, transaction.amount, transaction.tag_id, transaction.merchant_id]
+    sql = "INSERT INTO transactions (transaction_title, amount, tag_name, merchant_id) VALUES (%s, %s, %s, %s) RETURNING * "
+    values = [transaction.transaction_title, transaction.amount, transaction.tag_name, transaction.merchant_id]
     
     results = run_sql(sql, values)
     id = results[0]['id']
@@ -26,7 +26,7 @@ def select_all():
     for row in results:
         tag = tag_repository.select(row['tag_id'])
         merchant = merchant_repository.select(row['merchant_id'])
-        transaction = Transaction(row['transaction_title'], row['amount'], row['tag_id'], row['merchant_id'], row["id"])
+        transaction = Transaction(row['transaction_title'], row['amount'], row['tag_name'], row['merchant_id'], row["id"])
         transactions.append(transaction)
     return transactions
 
@@ -40,7 +40,7 @@ def select(id):
     if result is not None:
         tag = tag_repository.select(result['tag_id'])
         merchant = merchant_repository.select(result['merchant_id'])
-        transaction = Transaction(result['transaction_title'], result['amount'], result['tag_id'], tag, merchant, result['merchant_id'] )
+        transaction = Transaction(result['transaction_title'], result['amount'], result['tag_name'], result['merchant_id'] )
     return transaction
 
 
@@ -56,7 +56,7 @@ def delete(id):
 
 
 def update(transaction):
-    sql = "UPDATE transactions SET (transaction_title, amount, tag_id, merchant_id) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [transaction.transaction_title, transaction.amount, transaction.tag_id, transaction.merchant_id, transaction_id]
+    sql = "UPDATE transactions SET (transaction_title, amount, tag_name, merchant_id) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [transaction.transaction_title, transaction.amount, transaction.tag_name, transaction.merchant_id]
     print(values)
     run_sql(sql, values)

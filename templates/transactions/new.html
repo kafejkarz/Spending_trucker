@@ -2,34 +2,31 @@
 
 
 {% block new_transaction %}
-    <!-- <div>
-        <button>BACK</button>
-
-    </div> -->
+    
     <div class="input">
         <div class="paragraph">
             <p>Transaction Editor</p>
         </div>
         <div class="new_transaction">
-            <form action="/transactions" method="post">
-                <div>
+            <form action="/transactions" method="post" class="form_border">
+                <div class="form">
                     <label for="transaction_title">transaction title:</label>
                     <input type="text" id="transaction_title" name="transaction_title" placeholder="string" required autofocus>
                 </div>
-                <div>
+                <div class="form">
                     <label for="amount">Type amount: £</label>
                     <input type="text" id="amount" name="amount" placeholder="124.56" required autofocus>
                 </div>
-                <div>
+                <div class="form">
                     <label for="merchant">Add merchant:</label>
                     <input type="text" id="merchant" name="merchant" placeholder="merchant_id number" required autofocus>
                 </div>
             
-                <div>
+                <div class="form">
                     <label for="tag">Add tag:</label>
-                    <input type="text" id="tag" name="tag" placeholder="tag_id number" required autofocus>
+                    <input type="text" id="tag" name="tag" placeholder="add tag" required autofocus>
                 </div>
-                <button type="submit">Add transaction</button>
+                <button type="submit" class="button">Add transaction</button>
                 
                 
             </form>
