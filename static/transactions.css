@@ -54,6 +54,7 @@
 }
 .statements{
     background-color: white;
+    /* display: flex; */
     width: 96%;
     height: 290px;
     overflow: scroll;
@@ -65,4 +66,33 @@
 .trash-button{
     display: contents;
     font-size: 40%;
+    
+}
+.transaction_title{
+    padding: 30px;
+    
+}
+.amount{
+    padding: 30px;
+
+}
+.merchant{
+    padding: 30px;
+
+}
+.tag{
+    padding: 30px;
+
+}
+.button{
+    padding: 30px;
+}
+.statements-column{
+    display: flex;
+    border: 2px solid black;
+    margin-top: 10px;
+    justify-content: space-around;
+    background-color: lightgray;
+    border-radius: 10px;
+    
 }
