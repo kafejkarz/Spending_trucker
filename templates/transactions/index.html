@@ -5,13 +5,13 @@
             <button id="back">BACK</button>
             <img src="" alt="" id="image">
             <div id="balance">
-                <p>Net Balance:</p>
-                <p>£ 1360.69</p>
+                <p id="balance_p">Net Balance:</p>
+                <p id="balance_p">£ 1360.69</p>
             </div>
             <button id="transaction"><a href="/transactions/new">Add transaction</a></button>
             <button id="alert">Set Balance Alert</button>
             <div id="sort">
-                <p>Sort Transaction by Date</p>
+                <p id="balance_p">Sort Transaction by Date</p>
             </div>
         </div>   
         
@@ -21,10 +21,10 @@
 
             {% for transaction in transactions %}
             <div class="statements-column">
-                <div class="transaction_title">{{transaction.transaction_title}}</div>
-                <div class="amount">{{transaction.amount}}</div>
-                <div class="merchant">{{transaction.merchant_id}}</div>
                 <div class="tag">{{transaction.tag_id}}</div>
+                <div class="merchant">{{transaction.merchant_id}}</div>
+                <div class="transaction_title">{{transaction.transaction_title}}</div>
+                <div class="amount">£ {{transaction.amount}}</div>
                 <div class="buttons">
                     
                     <form action="/transactions/{{transaction.id}}/delete" method="POST">
@@ -35,8 +35,6 @@
 
                 </div>
             </div>
-            
-            
             {% endfor %}
         </div>
            

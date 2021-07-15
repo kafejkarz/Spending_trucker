@@ -30,6 +30,7 @@
     border-style: solid;
     border-width: 1px;
     border-color: black;
+    
 }
 #alert{
     background-color: white;
@@ -74,6 +75,9 @@
 }
 .amount{
     padding: 30px;
+    font-size: 20px;
+    border: solid black 1px;
+    justify-content: space-around;
 
 }
 .merchant{
@@ -95,4 +99,7 @@
     background-color: lightgray;
     border-radius: 10px;
     
+}
+#balance_p{
+    text-align: center;
 }
